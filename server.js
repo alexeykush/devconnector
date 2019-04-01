@@ -5,7 +5,6 @@ const passport = require("passport");
 const path = require("path");
 
 const app = express();
-const port = process.env.PORT || 80;
 
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
@@ -46,5 +45,5 @@ if (process.env.NODE_ENV === "production") {
     })
 }
 
-
+const port = process.env.PORT || 80;
 app.listen(port, () => console.log(`Server running on port ${port}`));
